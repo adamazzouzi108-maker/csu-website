@@ -61,12 +61,17 @@ footer{border-top:2px solid var(--line);padding:2rem 0;color:var(--mute);font-si
 .pill{display:inline-block;border:1px solid var(--line);padding:.15rem .55rem;font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;width:max-content}
 @media (max-width:560px){nav{gap:.7rem;font-size:.82rem}.event{padding:1rem}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:40rem}
+.form-grid label{font-weight:800;font-size:.9rem}
+.form-grid input,.form-grid select{width:100%;padding:.8rem;border:2px solid var(--line);background:var(--bg);color:var(--fg);font:inherit;margin-top:.3rem}
+.form-grid .full{grid-column:1/-1}
+.btn{display:inline-block;background:var(--fg);color:var(--bg);border:2px solid var(--line);padding:.9rem 1.6rem;font-weight:800;cursor:pointer;font:inherit;margin-top:1rem}
+@media(max-width:560px){.form-grid{grid-template-columns:1fr}}</style>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <a class="logo" href="#top" aria-label="CSU EST-K, accueil">
+  <a class="logo" href="#top" aria-label="CSU EST-K, accueil"><a href="#echecs">Calendrier des échecs</a><a href="#inscriptions">Inscriptions</a>
     <img class="mark" src="data:image/jpeg;base64,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" alt="Logo du CSU EST-K">
     <span>CSU EST-K</span>
   </a>
@@ -110,10 +115,36 @@ footer{border-top:2px solid var(--line);padding:2rem 0;color:var(--mute);font-si
       <p>École Supérieure de Technologie d’El Kelâa des Sraghna, Université Cadi Ayyad, Marrakech.</p>
     </div>
     <div class="note"><b>⚽ Tournoi de football :</b> le tournoi de football aura lieu la semaine prochaine. Les dates, le lieu et les modalités d’inscription seront annoncés très bientôt.</div>
-  </section>
+  </section><section id="inscriptions">
+  <h2>Inscriptions</h2>
+  <p class="calendar-intro"><b>Les étudiants peuvent s'inscrire ici.</b> Remplis le formulaire, puis envoie ton inscription.</p>
+  <form id="form-inscription" class="form-grid" onsubmit="return envoyerInscription(event)">
+    <div><label>Nom<br><input type="text" name="nom" placeholder="Ton nom" required></label></div>
+    <div><label>Prénom<br><input type="text" name="prenom" placeholder="Ton prénom" required></label></div>
+    <div><label>Filière / Classe<br><input type="text" name="filiere" placeholder="Ex : DUT Génie Informatique"></label></div>
+    <div><label>Téléphone<br><input type="tel" name="telephone" placeholder="Ex : 06 XX XX XX XX" required></label></div>
+    <div><label>Sport<br><select name="sport"><option>Tournoi d'échecs</option><option>Tournoi de football</option><option>Les deux</option></select></label></div>
+    <div><label>Niveau<br><select name="niveau"><option>Débutant</option><option>Intermédiaire</option><option>Avancé</option></select></label></div>
+    <div class="full"><button class="btn" type="submit">S'inscrire</button></div>
+  </form>
+  <div class="note"><b>Après l'inscription :</b> tu seras redirigé vers WhatsApp avec tes infos déjà remplies.</div>
+</section>
 </main>
 
 <footer>CSU EST-K · Club Sportif Universitaire · Calendrier des échecs · Mis à jour en novembre 2026 · École Supérieure de Technologie d’El Kelâa des Sraghna</footer>
 </div>
-</body>
+<script>
+function envoyerInscription(e){
+  e.preventDefault();
+  var f = e.target;
+  var msg = "Bonjour CSU EST-K, je veux m'inscrire : %0A%0ANom : " + encodeURIComponent(f.nom.value)
+    + "%0APrenom : " + encodeURIComponent(f.prenom.value)
+    + "%0AFiliere : " + encodeURIComponent(f.filiere.value)
+    + "%0ATelephone : " + encodeURIComponent(f.telephone.value)
+    + "%0ASport : " + encodeURIComponent(f.sport.value)
+    + "%0ANiveau : " + encodeURIComponent(f.niveau.value);
+  window.open("https://wa.me/212681294000?text=" + msg, "_blank");
+  return false;
+}
+</script></body>
 </html>
